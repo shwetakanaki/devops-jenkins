@@ -9,6 +9,11 @@ pipeline {
             sh "python3 demo.py"
             }
         }
+           stage('install ') {
+            steps {
+            sh "yum install httpd -y"
+            }
+        }
         
     }
 }
