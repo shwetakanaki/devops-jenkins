@@ -4,26 +4,11 @@ pipeline {
     stages {
     
         
-         stage('java file ') {
+         stage('build') {
             steps {
-            sh "touch cloud.java"
+            sh "python3 demo.py"
             }
         }
-         stage('java execution') {
-            steps {
         
-            sh "java cloud.java"
-            }
-        }
-         stage('create') {
-            steps {
-           sh " touch test.py"
-            }
-        }
-         stage('add') {
-            steps {
-           sh  "echo 'a=90'> test.py"
-            }
-        }
     }
 }
